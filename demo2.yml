@@ -1,0 +1,8 @@
+- name: DEMO2
+  hosts: myos
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
+     - name: ping google
+       command: ping -c 3 google.com

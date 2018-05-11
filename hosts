@@ -1,0 +1,6 @@
+[myos]
+192.168.32.75
+[myos:vars]
+ansible_connection=ssh
+ansible_ssh_user=alvin
+ansible_ssh_pass=alvin

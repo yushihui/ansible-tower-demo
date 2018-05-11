@@ -1,6 +1,5 @@
 - name: Hello World Sample
-  hosts: all
-  become: yes
+  hosts: myos
   tasks:
     - name: Hello Message
       debug:

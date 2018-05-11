@@ -4,5 +4,5 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
-     - name: ping google
-       command: ping -c 3 google.com
+    - name: ping google
+      command: ping -c 3 google.com

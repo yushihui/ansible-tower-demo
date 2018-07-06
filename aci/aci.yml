@@ -1,0 +1,36 @@
+- name: "Demonstrate connecting to switches"
+  hosts: apic
+  gather_facts: no
+  connection: local
+
+  tasks:
+    ###
+    # Collect data
+    #
+    - name: aci query tenant
+      aci_tenant:
+        hostname: "{{ inventory_hostname }}"
+        username: admin
+        password: Netbrain1
+        validate_certs: no
+        state: query
+
+    - name: nb path
+      nb_path_api:
+        hostname: "{{ inventory_hostname }}"
+        username: "{{username}}"
+        password: "{{password}}"
+        domain: "{{ domain }}"
+        api: path
+        from: "{{deviceA}}"
+        to: "{{deviceB}}"
+
+    - name: nb benchmark topo
+      nb_benchmark_api:
+        hostname: "{{ inventory_hostname }}"
+        username: "{{username}}"
+        password: "{{password}}"
+        domain: "{{ domain }}"
+        api: topo
+        devices: "{{devices}} `     ` "
+        :::::

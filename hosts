@@ -1,6 +1,6 @@
 [myos]
-192.168.32.75
+192.168.4.125
 [myos:vars]
-ansible_connection=ssh
+ansible_connection=local
 ansible_ssh_user=alvin
 ansible_ssh_pass=alvin
